@@ -3,10 +3,14 @@ package com.fiap.DeliverLogistic.core.entities;
 import java.util.List;
 import java.util.Objects;
 
+import jakarta.validation.constraints.NotNull;
+
 public class Courier {
 
 	private Long courierid;
+	@NotNull
 	private String name;
+	@NotNull
 	private String email;
 	private Boolean online;
 	private Long timeOnline;
@@ -14,16 +18,6 @@ public class Courier {
 	
 	public Courier() {
 		super();
-	}
-
-	public Courier(Long courierid, String name, String email, Boolean online, Long timeOnline, List<Pedidos> pedidos) {
-		super();
-		this.courierid = courierid;
-		this.name = name;
-		this.email = email;
-		this.online = online;
-		this.timeOnline = timeOnline;
-		this.pedidos = pedidos;
 	}
 
 	public Long getCourierid() {
@@ -73,24 +67,5 @@ public class Courier {
 	public void setDeliver(List<Pedidos> pedidos) {
 		this.pedidos = pedidos;
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(courierid);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Courier other = (Courier) obj;
-		return Objects.equals(courierid, other.courierid);
-	}
-	
-	
 
 }

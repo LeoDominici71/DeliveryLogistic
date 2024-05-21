@@ -9,9 +9,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class PedidosResponse {
 	
 	private Long id;

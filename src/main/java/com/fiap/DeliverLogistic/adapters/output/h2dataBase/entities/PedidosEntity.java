@@ -20,10 +20,7 @@ import lombok.ToString;
 @Table(name = "tb_orders")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@EqualsAndHashCode
 public class PedidosEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

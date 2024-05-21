@@ -23,10 +23,7 @@ import lombok.ToString;
 @Table(name = "tb_courier")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@EqualsAndHashCode
 public class CourierEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
